@@ -1,6 +1,6 @@
 {
   "name": "interswitch-skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "18 modular AI agent skills for Interswitch payment integration — TypeScript, Node.js, Next.js. Web checkout, card payments, wallets, transfers, VAS, split settlement, and more.",
   "keywords": [
     "interswitch",
