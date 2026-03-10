@@ -1,0 +1,36 @@
+{
+  "name": "interswitch-skills",
+  "version": "1.0.0",
+  "description": "18 modular AI agent skills for Interswitch payment integration — TypeScript, Node.js, Next.js. Web checkout, card payments, wallets, transfers, VAS, split settlement, and more.",
+  "keywords": [
+    "interswitch",
+    "interswitch-api",
+    "payment-gateway",
+    "typescript",
+    "nodejs",
+    "nextjs",
+    "ai-skills",
+    "agent-skills",
+    "payment-integration",
+    "fintech",
+    "africa-payments",
+    "naira",
+    "quickteller",
+    "wallets",
+    "transfers",
+    "vas",
+    "split-payments",
+    "card-payments",
+    "webhooks"
+  ],
+  "homepage": "https://rexedge.github.io/interswitch/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rexedge/interswitch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rexedge/interswitch/issues"
+  },
+  "author": "rexedge",
+  "license": "MIT"
+}

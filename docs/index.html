@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interswitch Skills — 18 AI Agent Skills for Interswitch Payment Integration</title>
+  <meta name="description" content="18 modular AI agent skills for integrating Interswitch payments into TypeScript, Node.js, and Next.js applications. Web checkout, card payments, wallets, transfers, VAS, split settlement, and more.">
+  <meta name="keywords" content="interswitch, interswitch api, interswitch integration, typescript, nodejs, nextjs, payment gateway, ai skills, agent skills, payment integration, fintech, africa payments, naira, ngn, quickteller, wallets">
+  <meta name="author" content="rexedge">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rexedge.github.io/interswitch/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Interswitch Skills — 18 AI Agent Skills for Payment Integration">
+  <meta property="og:description" content="Modular AI agent skills for Interswitch. TypeScript-ready patterns for web checkout, card payments, wallets, transfers, VAS, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rexedge.github.io/interswitch/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interswitch Skills — 18 AI Agent Skills for Payment Integration">
+  <meta name="twitter:description" content="Modular AI agent skills for Interswitch. TypeScript-ready patterns for web checkout, card payments, wallets, transfers, VAS, and more.">
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #262626;
+      --text: #ededed;
+      --muted: #a1a1a1;
+      --accent: #e23e32;
+      --accent2: #ff5722;
+      --green: #22c55e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 32px;
+    }
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .badge.highlight { border-color: var(--accent); color: var(--accent); }
+
+    /* Install */
+    .install-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      max-width: 560px;
+      margin: 0 auto 60px;
+      text-align: left;
+    }
+    .install-box code {
+      display: block;
+      font-family: "Fira Code", "Cascadia Code", monospace;
+      font-size: 0.95rem;
+      color: var(--green);
+    }
+    .install-box .comment { color: var(--muted); }
+
+    /* Skills Grid */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .category { margin-bottom: 40px; }
+    .category h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: border-color 0.2s;
+    }
+    .skill-card:hover { border-color: var(--accent); }
+    .skill-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .skill-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Use Cases */
+    .use-cases {
+      padding: 40px 0;
+    }
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .use-case {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .use-case h4 { font-size: 1rem; margin-bottom: 8px; }
+    .use-case p { font-size: 0.85rem; color: var(--muted); }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Interswitch Skills Collection",
+    "description": "18 modular AI agent skills for Interswitch payment integration. TypeScript, Node.js, and Next.js ready.",
+    "url": "https://github.com/rexedge/interswitch",
+    "codeRepository": "https://github.com/rexedge/interswitch",
+    "programmingLanguage": ["TypeScript", "JavaScript"],
+    "author": {
+      "@type": "Person",
+      "name": "rexedge",
+      "url": "https://github.com/rexedge"
+    },
+    "license": "https://opensource.org/licenses/MIT",
+    "keywords": "interswitch, payment gateway, typescript, nodejs, nextjs, ai skills, agent skills, fintech, quickteller, wallets"
+  }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Interswitch Skills</h1>
+      <p>18 modular AI agent skills for integrating Interswitch payments into TypeScript, Node.js, and Next.js applications.</p>
+
+      <div class="badge-row">
+        <span class="badge highlight">18 Skills</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">Node.js</span>
+        <span class="badge">Next.js</span>
+        <span class="badge">Interswitch API</span>
+      </div>
+
+      <div class="install-box">
+        <code><span class="comment"># Install all 18 skills</span></code>
+        <code>npx skills add rexedge/interswitch --all</code>
+        <br>
+        <code><span class="comment"># Or pick specific skills</span></code>
+        <code>npx skills add rexedge/interswitch -s interswitch-web-checkout</code>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-title">All Skills</h2>
+      <p class="section-subtitle">Every Interswitch API product, covered.</p>
+
+      <div class="category">
+        <h3>Core</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-setup</h4><p>OAuth 2.0, Passport v2, env config, TypeScript helpers</p></div>
+          <div class="skill-card"><h4>interswitch-webhooks</h4><p>HmacSHA512 validation, event handling, retry policy</p></div>
+          <div class="skill-card"><h4>interswitch-testing</h4><p>Test credentials, test cards, sandbox URLs, go-live checklist</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Payments &amp; Checkout</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-web-checkout</h4><p>Inline Checkout JS, Web Redirect, React hook</p></div>
+          <div class="skill-card"><h4>interswitch-card-payments</h4><p>Direct card, authData encryption, 3D Secure, Hosted Fields</p></div>
+          <div class="skill-card"><h4>interswitch-payment-links</h4><p>Create, list, update, deactivate payment links</p></div>
+          <div class="skill-card"><h4>interswitch-split-settlement</h4><p>Split payments, beneficiary config, settlement accounts</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Wallets &amp; Transactions</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-wallets</h4><p>Create wallet, balance, virtual cards, Zod validation</p></div>
+          <div class="skill-card"><h4>interswitch-transactions</h4><p>Debit wallet, status, requery, reversal</p></div>
+          <div class="skill-card"><h4>interswitch-transaction-search</h4><p>Quick search, reference search, reconciliation</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Transfers &amp; Payouts</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-transfers</h4><p>Account validation, MAC hash, single transfer</p></div>
+          <div class="skill-card"><h4>interswitch-payouts</h4><p>Payout channels, receiving institutions, routing</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Value Added Services</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-vas</h4><p>Biller categories, bill payment, airtime recharge</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Cards &amp; Fintech</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-card360</h4><p>Card issuance, PIN management, block/unblock</p></div>
+          <div class="skill-card"><h4>interswitch-fintech-cards</h4><p>Card debit, reversal, lien management</p></div>
+          <div class="skill-card"><h4>interswitch-cardless</h4><p>Paycode generation, status check, ATM withdrawal</p></div>
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Insights &amp; Data</h3>
+        <div class="skills-grid">
+          <div class="skill-card"><h4>interswitch-customer-insights</h4><p>Demographics, financial history, KYC flow</p></div>
+          <div class="skill-card"><h4>interswitch-lending</h4><p>Nano loans, salary lending, eligibility, repayment</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="use-cases">
+      <h2 class="section-title">Use Cases</h2>
+      <p class="section-subtitle">What you can build with these skills.</p>
+      <div class="use-case-grid">
+        <div class="use-case">
+          <h4>E-commerce Checkout</h4>
+          <p>Web Checkout + Card Payments + Webhooks</p>
+        </div>
+        <div class="use-case">
+          <h4>Wallet Platform</h4>
+          <p>Wallets + Transactions + Transfers</p>
+        </div>
+        <div class="use-case">
+          <h4>Marketplace Payments</h4>
+          <p>Split Settlement + Transfers + Payouts</p>
+        </div>
+        <div class="use-case">
+          <h4>Bill Payment App</h4>
+          <p>VAS + Wallets + Transactions</p>
+        </div>
+        <div class="use-case">
+          <h4>Card Management</h4>
+          <p>Card 360 + Fintech Cards + Cardless</p>
+        </div>
+        <div class="use-case">
+          <h4>Lending Platform</h4>
+          <p>Lending + Customer Insights + Wallets</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      <a href="https://github.com/rexedge/interswitch">GitHub</a> &middot;
+      <a href="https://github.com/rexedge/interswitch/issues">Issues</a> &middot;
+      <a href="https://github.com/rexedge/interswitch/discussions">Discussions</a> &middot;
+      <a href="https://docs.interswitchgroup.com/docs/home">Interswitch API Docs</a>
+    </p>
+    <p style="margin-top: 8px;">MIT License &copy; rexedge</p>
+  </footer>
+
+</body>
+</html>
