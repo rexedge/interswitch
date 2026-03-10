@@ -1,12 +1,13 @@
-# Interswitch Skills Collection
+# Interswitch Agent Skills: Automate Payment Integration
 
-> **18 modular AI agent skills for [Interswitch](https://www.interswitchgroup.com/) payment integration** — TypeScript, Node.js, and Next.js ready.
+> **18 AI agent skills for [Interswitch API integration](https://docs.interswitchgroup.com/docs/home)** — automate web checkout, card payments, wallets, transfers, VAS, and split settlement in TypeScript, Node.js, and Next.js.
 
-Build payment systems, wallets, card processing, transfers, VAS, and more with production-ready Interswitch API patterns. Each skill teaches your AI coding agent exactly how to integrate a specific part of the Interswitch API — type-safe, tested, and ready to ship.
+Interswitch Agent Skills are production-ready, type-safe **automated payment agent** patterns that teach GitHub Copilot, Cursor, and other AI coding agents how to integrate every Interswitch API product. Install with a single command and build fintech workflows, e-commerce checkouts, wallet platforms, bill payment apps, and lending systems instantly. These Interswitch developer tools cover 18 API products — from Web Checkout to Card 360 and Quickteller VAS.
 
 [![Skills](https://img.shields.io/badge/skills.sh-18_skills-blue)](https://skills.sh)
 [![Interswitch](https://img.shields.io/badge/Interswitch-API-green)](https://www.interswitchgroup.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6)](https://www.typescriptlang.org/)
+[![npm](https://img.shields.io/npm/v/interswitch-skills)](https://www.npmjs.com/package/interswitch-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Why Use Interswitch Skills?
@@ -109,15 +110,21 @@ These skills help your AI agent build:
 
 ## Quick Links
 
-- [Interswitch API Documentation](https://docs.interswitchgroup.com/docs/home)
+- [Official Interswitch API Documentation](https://docs.interswitchgroup.com/docs/home)
 - [Interswitch Developer Portal](https://developer.interswitchgroup.com/)
-- [Skills Registry](https://skills.sh)
-- [Report an Issue](https://github.com/rexedge/interswitch/issues)
-- [Discussions](https://github.com/rexedge/interswitch/discussions)
+- [Interswitch Skills on npm](https://www.npmjs.com/package/interswitch-skills)
+- [Interswitch Skills GitHub Pages](https://rexedge.github.io/interswitch/)
+- [Skills.sh Open Agent Skills Ecosystem](https://skills.sh)
+- [Report an Issue with Interswitch Skills](https://github.com/rexedge/interswitch/issues)
+- [Community Discussions for Interswitch Skills](https://github.com/rexedge/interswitch/discussions)
+
+## Related Projects
+
+- [Paystack Agent Skills](https://github.com/rexedge/paystack) — 24 AI agent skills for Paystack API integration (transactions, webhooks, subscriptions, transfers, marketplace splits)
 
 ## Contributing
 
-Found an issue or want to improve a skill? [Open an issue](https://github.com/rexedge/interswitch/issues) or submit a pull request.
+Found an issue or want to improve an Interswitch skill? [Report a bug or suggest a feature](https://github.com/rexedge/interswitch/issues) or [submit a pull request](https://github.com/rexedge/interswitch/pulls).
 
 ## License
 
